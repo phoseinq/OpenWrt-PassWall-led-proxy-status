@@ -51,8 +51,8 @@ Before installation, make sure you have:
 - ✅ OpenWrt installed on your router
 - ✅ Router with RGB LED support
 - ✅ Active SOCKS5 proxy (Xray, sing-box, v2ray, etc.)
-- ✅ `curl` package (will be installed automatically)
-- ✅ `git` package (will be installed automatically)
+- ✅ `wget` package (will be installed automatically)
+- ✅ `zip` package (will be installed automatically)
 
 ---
 
@@ -235,8 +235,8 @@ If this project helped you, please consider:
 - ✅ OpenWrt روی روتر نصب باشه
 - ✅ روتر چراغ RGB داشته باشه
 - ✅ پروکسی SOCKS5 فعال (Xray، sing-box، v2ray و غیره)
-- ✅ پکیج `curl` (خودکار نصب می‌شه)
-- ✅ پکیج `git` (خودکار نصب می‌شه)
+- ✅ پکیج `wget` (خودکار نصب می‌شه)
+- ✅ پکیج `zip` (خودکار نصب می‌شه)
 
 ---
 
