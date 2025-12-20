@@ -61,7 +61,13 @@ Before installation, make sure you have:
 Copy and paste this **single command** into your router's SSH terminal:
 
 ```bash
-opkg update && opkg install git git-http curl && cd /tmp && git clone https://github.com/phoseinq/led-proxy-status.git && cd led-proxy-status && chmod +x install.sh && sh install.sh
+cd /tmp
+opkg install wget-ssl unzip
+wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip
+unzip led.zip
+cd OpenWrt-PassWall-led-proxy-status-main
+chmod +x install.sh
+sh install.sh
 ```
 
 **During installation:**
@@ -242,7 +248,13 @@ If this project helped you, please consider:
 این **یک دستور** رو کپی کن و توی ترمینال SSH روترت بزن:
 
 ```bash
-opkg update && opkg install git git-http curl && cd /tmp && git clone https://github.com/phoseinq/led-proxy-status.git && cd led-proxy-status && chmod +x install.sh && sh install.sh
+cd /tmp
+opkg install wget-ssl unzip
+wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip
+unzip led.zip
+cd OpenWrt-PassWall-led-proxy-status-main
+chmod +x install.sh
+sh install.sh
 ```
 
 **در حین نصب:**
