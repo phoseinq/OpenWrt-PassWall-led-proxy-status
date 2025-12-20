@@ -61,7 +61,7 @@ Before installation, make sure you have:
 Copy and paste this **single command** into your router's SSH terminal:
 
 ```bash
-opkg update && opkg install git git-http curl && cd /tmp && git clone https://github.com/YOUR_USERNAME/led-proxy-status.git && cd led-proxy-status && chmod +x install.sh && sh install.sh
+opkg update && opkg install git git-http curl && cd /tmp && git clone https://github.com/phoseinq/led-proxy-status.git && cd led-proxy-status && chmod +x install.sh && sh install.sh
 ```
 
 **During installation:**
@@ -242,7 +242,7 @@ If this project helped you, please consider:
 این **یک دستور** رو کپی کن و توی ترمینال SSH روترت بزن:
 
 ```bash
-opkg update && opkg install git git-http curl && cd /tmp && git clone https://github.com/YOUR_USERNAME/led-proxy-status.git && cd led-proxy-status && chmod +x install.sh && sh install.sh
+opkg update && opkg install git git-http curl && cd /tmp && git clone https://github.com/phoseinq/led-proxy-status.git && cd led-proxy-status && chmod +x install.sh && sh install.sh
 ```
 
 **در حین نصب:**
