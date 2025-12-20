@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
 
 **Visual proxy & network status monitoring using your router's RGB LED**  
- **نشان دادن وضعیت پروکسی و اینترنت با چراغ RGB روتر **
+ **نمایش وضعیت اتصال پروکسی با چراغ های روتر**
 
 [English](#english) | [فارسی](#فارسی)
 
