@@ -167,7 +167,7 @@ echo none > /sys/class/leds/LED0_Blue/trigger
 
 **Connection Priority:**
 ```
-Proxy (Google) → Direct (Google) → Direct (Iran) → No Internet
+Proxy (Github) → Direct (Google) → Direct (Iran) → No Internet
 ```
 
 ---
@@ -352,7 +352,7 @@ echo none > /sys/class/leds/LED0_Blue/trigger
 
 **اولویت اتصال:**
 ```
-پروکسی (گوگل) ← مستقیم (گوگل) ← مستقیم (ایران) ← بدون اینترنت
+پروکسی (گیت هاب) ← مستقیم (گوگل) ← مستقیم (ایران) ← بدون اینترنت
 ```
 
 ---
