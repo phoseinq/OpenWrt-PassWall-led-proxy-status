@@ -130,6 +130,9 @@ To completely remove LED Proxy Status:
 rm -f /usr/bin/led-status-daemon.sh
 rm -f /etc/init.d/led-status
 rm -f /etc/config/led-status-port
+echo none > /sys/class/leds/LED0_Red/trigger
+echo none > /sys/class/leds/LED0_Green/trigger
+echo none > /sys/class/leds/LED0_Blue/trigger
 ```
 
 ---
@@ -311,6 +314,9 @@ echo "1080" > /etc/config/led-status-port
 rm -f /usr/bin/led-status-daemon.sh
 rm -f /etc/init.d/led-status
 rm -f /etc/config/led-status-port
+echo none > /sys/class/leds/LED0_Red/trigger
+echo none > /sys/class/leds/LED0_Green/trigger
+echo none > /sys/class/leds/LED0_Blue/trigger
 ```
 
 ---
