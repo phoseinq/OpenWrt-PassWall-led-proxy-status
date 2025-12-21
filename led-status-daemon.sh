@@ -48,7 +48,7 @@ boot_phase() {
 }
 
 proxy_ok() {
-  curl -x "$PROXY" -m 7 -s --fail https://api.github.com/zen >/dev/null 2>&1
+  curl -x "$PROXY" -m 7 -s http://ifconfig.me >/dev/null 2>&1
 }
 
 google_ok() {
@@ -67,7 +67,7 @@ boot_phase
 while true; do
   if proxy_ok; then
     [ "$state" != "white" ] && set_white && state="white"
-    sleep_s=60
+    sleep_s=30
   elif google_ok; then
     [ "$state" != "cyan" ] && set_cyan && state="cyan"
     sleep_s=30
