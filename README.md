@@ -159,7 +159,7 @@ echo none > /sys/class/leds/LED0_Blue/trigger
 
 ### 📝 How It Works
 
-1. **Proxy Check** - Tests SOCKS5 proxy by connecting to Github
+1. **Proxy Check** - Tests SOCKS5 proxy by connecting to ifconfig
 2. **Google Check** - Direct connection test to Google servers
 3. **Iran Check** - Fallback test to Iranian servers
 4. **LED Control** - Updates LED color based on results
@@ -167,7 +167,7 @@ echo none > /sys/class/leds/LED0_Blue/trigger
 
 **Connection Priority:**
 ```
-Proxy (Github) → Direct (Google) → Direct (Iran) → No Internet
+Proxy (ifconfig) → Direct (Google) → Direct (Iran) → No Internet
 ```
 
 ---
@@ -344,7 +344,7 @@ echo none > /sys/class/leds/LED0_Blue/trigger
 
 ### 📝 نحوه کار
 
-1. **تست پروکسی** - اتصال به گیت هاب از طریق پروکسی SOCKS5
+1. **تست پروکسی** - اتصال به (ifconfig) از طریق پروکسی SOCKS5
 2. **تست گوگل** - اتصال مستقیم به سرورهای گوگل
 3. **تست ایران** - تست بک‌آپ به سرورهای ایرانی
 4. **کنترل LED** - آپدیت رنگ LED بر اساس نتایج
@@ -352,7 +352,7 @@ echo none > /sys/class/leds/LED0_Blue/trigger
 
 **اولویت اتصال:**
 ```
-پروکسی (گیت هاب) ← مستقیم (گوگل) ← مستقیم (ایران) ← بدون اینترنت
+پروکسی (ifconfig) ← مستقیم (گوگل) ← مستقیم (ایران) ← بدون اینترنت
 ```
 
 ---
