@@ -67,7 +67,7 @@ boot_phase
 while true; do
   if proxy_ok; then
     [ "$state" != "white" ] && set_white && state="white"
-    sleep_s=30
+    sleep_s=60
   elif google_ok; then
     [ "$state" != "cyan" ] && set_cyan && state="cyan"
     sleep_s=30
