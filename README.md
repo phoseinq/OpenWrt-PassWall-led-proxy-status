@@ -70,6 +70,16 @@ cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certifi
 2. Example: If your proxy runs on `127.0.0.1:1070`, enter `1070`
 3. The service will start automatically after installation
 
+### 🔄 Update
+
+To update to the latest version, run the same installation command again:
+
+> ⚠️ You will be prompted to enter your SOCKS5 proxy port again.
+
+```bash
+cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
+```
+
 ---
 
 ### 🎮 Service Management
