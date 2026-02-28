@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SOCKS_PORT="__SOCKS_PORT__"
+SOCKS_PORT="1070"
 PROXY="socks5h://127.0.0.1:$SOCKS_PORT"
 
 LED_R="/sys/class/leds/LED0_Red"
@@ -11,6 +11,9 @@ cleanup_leds() {
   echo none > "$LED_R/trigger"
   echo none > "$LED_G/trigger"
   echo none > "$LED_B/trigger"
+  echo 0 > "$LED_R/brightness"
+  echo 0 > "$LED_G/brightness"
+  echo 0 > "$LED_B/brightness"
 }
 
 set_white() {
@@ -56,7 +59,7 @@ google_ok() {
 }
 
 iran_ok() {
-  ping -c 1 -W 2 iran.ir >/dev/null 2>&1
+  ping -c 1 -W 2 176.102.251.1 >/dev/null 2>&1
 }
 
 state=""
@@ -67,7 +70,7 @@ boot_phase
 while true; do
   if proxy_ok; then
     [ "$state" != "white" ] && set_white && state="white"
-    sleep_s=60
+    sleep_s=30
   elif google_ok; then
     [ "$state" != "cyan" ] && set_cyan && state="cyan"
     sleep_s=30
