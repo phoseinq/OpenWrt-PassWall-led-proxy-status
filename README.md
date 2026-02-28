@@ -260,6 +260,16 @@ If this project helped you, please consider:
 cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
 ```
 
+
+### 🔄 آپدیت
+
+برای آپدیت به آخرین نسخه، همون دستور نصب رو دوباره بزن:
+
+> ⚠️ در حین آپدیت دوباره پورت پروکسی ازت پرسیده می‌شه.
+
+```bash
+cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
+```
 **در حین نصب:**
 1. اسکریپت ازت پورت پروکسی SOCKS5 رو می‌پرسه
 2. مثلاً اگه پروکسیت روی `127.0.0.1:1070` اجراست، عدد `1070` رو وارد کن
