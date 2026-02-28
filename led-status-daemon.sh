@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SOCKS_PORT="1070"
+SOCKS_PORT="__SOCKS_PORT__"
 PROXY="socks5h://127.0.0.1:$SOCKS_PORT"
 
 LED_R="/sys/class/leds/LED0_Red"
