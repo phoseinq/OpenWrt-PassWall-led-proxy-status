@@ -260,6 +260,11 @@ If this project helped you, please consider:
 cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
 ```
 
+**در حین نصب:**
+1. اسکریپت ازت پورت پروکسی SOCKS5 رو می‌پرسه
+2. مثلاً اگه پروکسیت روی `127.0.0.1:1070` اجراست، عدد `1070` رو وارد کن
+3. سرویس بعد از نصب خودکار استارت می‌شه
+
 
 ### 🔄 آپدیت
 
@@ -270,11 +275,6 @@ cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certifi
 ```bash
 cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
 ```
-**در حین نصب:**
-1. اسکریپت ازت پورت پروکسی SOCKS5 رو می‌پرسه
-2. مثلاً اگه پروکسیت روی `127.0.0.1:1070` اجراست، عدد `1070` رو وارد کن
-3. سرویس بعد از نصب خودکار استارت می‌شه
-
 ---
 
 ### 🎮 مدیریت سرویس
