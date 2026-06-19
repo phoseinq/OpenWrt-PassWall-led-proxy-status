@@ -64,7 +64,7 @@ Before installation, make sure you have:
 Copy and paste this **single command** into your router's SSH terminal:
 
 ```bash
-cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && wget --no-check-certificate -O led-status-daemon.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh && sh install.sh
+cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
 ```
 
 **During installation:**
@@ -79,7 +79,7 @@ To update to the latest version, run the same installation command again:
 > ⚠️ You will be prompted to enter your SOCKS5 proxy port again.
 
 ```bash
-cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && wget --no-check-certificate -O led-status-daemon.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh && sh install.sh
+cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
 ```
 
 ---
@@ -261,7 +261,7 @@ If this project helped you, please consider:
 این **یک دستور** رو کپی کن و توی ترمینال SSH روترت بزن:
 
 ```bash
-cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && wget --no-check-certificate -O led-status-daemon.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh && sh install.sh
+cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
 ```
 
 **در حین نصب:**
@@ -277,7 +277,7 @@ cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubuserconte
 > ⚠️ در حین آپدیت دوباره پورت پروکسی ازت پرسیده می‌شه.
 
 ```bash
-cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && wget --no-check-certificate -O led-status-daemon.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh && sh install.sh
+cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
 ```
 ---
 

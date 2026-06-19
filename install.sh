@@ -26,14 +26,21 @@ fi
 
 echo "[+] Installing with SOCKS port $PORT"
 
-# led-status-daemon.sh must sit next to this script.
+# Find led-status-daemon.sh next to this script; if it isn't there, download it.
 SRC_DIR=$(dirname "$0")
-if [ ! -f "$SRC_DIR/led-status-daemon.sh" ]; then
-  echo "Error: led-status-daemon.sh not found next to install.sh"
+DAEMON_SRC="$SRC_DIR/led-status-daemon.sh"
+if [ ! -f "$DAEMON_SRC" ]; then
+  echo "[+] led-status-daemon.sh not found, downloading it ..."
+  DAEMON_SRC=/tmp/led-status-daemon.sh
+  wget --no-check-certificate -O "$DAEMON_SRC" \
+    https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh
+fi
+if [ ! -s "$DAEMON_SRC" ]; then
+  echo "Error: could not find or download led-status-daemon.sh"
   exit 1
 fi
 
-sed "s/__SOCKS_PORT__/$PORT/g" "$SRC_DIR/led-status-daemon.sh" > /usr/bin/led-status-daemon.sh
+sed "s/__SOCKS_PORT__/$PORT/g" "$DAEMON_SRC" > /usr/bin/led-status-daemon.sh
 chmod +x /usr/bin/led-status-daemon.sh
 
 cat > /etc/init.d/led-status <<'EOF'
