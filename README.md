@@ -67,6 +67,16 @@ Copy and paste this **single command** into your router's SSH terminal:
 cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
 ```
 
+**Tip:** if your SSH client wraps and breaks the long line, run these three lines instead (each one on its own line):
+
+```bash
+cd /tmp
+wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh
+sh install.sh
+```
+
+`install.sh` downloads the daemon by itself if it isn't already in the folder.
+
 **During installation:**
 1. The script will prompt you for your SOCKS5 proxy port
 2. Example: If your proxy runs on `127.0.0.1:1070`, enter `1070`
@@ -263,6 +273,16 @@ If this project helped you, please consider:
 ```bash
 cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
 ```
+
+**نکته:** اگه کلاینتِ SSHت خطِ بلند رو می‌شکنه، به‌جاش این سه خط رو جدا جدا بزن (هر کدوم یک خط):
+
+```bash
+cd /tmp
+wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh
+sh install.sh
+```
+
+خودِ `install.sh` اگه دیمن کنارش نباشه، خودش دانلودش می‌کنه.
 
 **در حین نصب:**
 1. اسکریپت ازت پورت پروکسی SOCKS5 رو می‌پرسه
