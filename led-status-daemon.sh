@@ -3,49 +3,68 @@
 SOCKS_PORT="__SOCKS_PORT__"
 PROXY="socks5h://127.0.0.1:$SOCKS_PORT"
 
-LED_R="/sys/class/leds/LED0_Red"
-LED_G="/sys/class/leds/LED0_Green"
-LED_B="/sys/class/leds/LED0_Blue"
+LED_DIR="/sys/class/leds"
+
+# Pick the first existing LED directory matching a glob pattern.
+first_led() {
+  for d in $1; do
+    [ -d "$d" ] && { printf '%s\n' "$d"; return 0; }
+  done
+  return 1
+}
+
+# Auto-detect the red/green/blue LED nodes (names differ between devices and
+# OpenWrt versions), then fall back to the Google WiFi / OnHub names.
+LED_R=$(first_led "$LED_DIR/*[Rr]ed*")
+LED_G=$(first_led "$LED_DIR/*[Gg]reen*")
+LED_B=$(first_led "$LED_DIR/*[Bb]lue*")
+[ -n "$LED_R" ] || LED_R="$LED_DIR/LED0_Red"
+[ -n "$LED_G" ] || LED_G="$LED_DIR/LED0_Green"
+[ -n "$LED_B" ] || LED_B="$LED_DIR/LED0_Blue"
+
+logger -t led-status "LED paths: R=$LED_R G=$LED_G B=$LED_B"
+if [ ! -d "$LED_R" ] && [ ! -d "$LED_G" ] && [ ! -d "$LED_B" ]; then
+  logger -t led-status "no RGB LEDs found. Available: $(ls "$LED_DIR" 2>/dev/null | tr '\n' ' ')"
+fi
+
+# Write a value to a sysfs attribute only if it exists (avoids errors/spinning).
+wr() { [ -e "$1" ] && echo "$2" > "$1" 2>/dev/null; }
 
 cleanup_leds() {
-  echo none > "$LED_R/trigger"
-  echo none > "$LED_G/trigger"
-  echo none > "$LED_B/trigger"
-  echo 0 > "$LED_R/brightness"
-  echo 0 > "$LED_G/brightness"
-  echo 0 > "$LED_B/brightness"
+  for L in "$LED_R" "$LED_G" "$LED_B"; do
+    wr "$L/trigger" none
+    wr "$L/brightness" 0
+  done
 }
 
 set_white() {
   cleanup_leds
-  echo default-on > "$LED_R/trigger"
-  echo default-on > "$LED_G/trigger"
-  echo default-on > "$LED_B/trigger"
+  for L in "$LED_R" "$LED_G" "$LED_B"; do wr "$L/trigger" default-on; done
 }
 
 set_cyan() {
   cleanup_leds
-  echo default-on > "$LED_G/trigger"
-  echo default-on > "$LED_B/trigger"
+  wr "$LED_G/trigger" default-on
+  wr "$LED_B/trigger" default-on
 }
 
 set_purple() {
   cleanup_leds
-  echo default-on > "$LED_R/trigger"
-  echo default-on > "$LED_B/trigger"
+  wr "$LED_R/trigger" default-on
+  wr "$LED_B/trigger" default-on
 }
 
 set_red_blink() {
   cleanup_leds
-  echo timer > "$LED_R/trigger"
-  echo 300 > "$LED_R/delay_on"
-  echo 300 > "$LED_R/delay_off"
+  wr "$LED_R/trigger" timer
+  wr "$LED_R/delay_on" 300
+  wr "$LED_R/delay_off" 300
 }
 
 boot_phase() {
   cleanup_leds
-  echo default-on > "$LED_R/trigger"
-  echo default-on > "$LED_G/trigger"
+  wr "$LED_R/trigger" default-on
+  wr "$LED_G/trigger" default-on
   sleep 60
   cleanup_leds
 }

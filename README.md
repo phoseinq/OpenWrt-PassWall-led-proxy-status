@@ -52,8 +52,10 @@ Before installation, make sure you have:
 - ✅ OpenWrt installed on your router
 - ✅ Router with RGB LED support
 - ✅ Active SOCKS5 proxy (Xray, sing-box, v2ray, etc.)
-- ✅ `wget` package (will be installed automatically)
-- ✅ `zip` package (will be installed automatically)
+- ✅ `wget` (built into OpenWrt — used to download the script)
+- ✅ `curl` (installed automatically via `opkg` or `apk` — used for the proxy check)
+
+> Works on both `opkg` (OpenWrt ≤ 24.10) and `apk` (OpenWrt 25.x and newer).
 
 ---
 
@@ -62,7 +64,7 @@ Before installation, make sure you have:
 Copy and paste this **single command** into your router's SSH terminal:
 
 ```bash
-cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
+cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && wget --no-check-certificate -O led-status-daemon.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh && sh install.sh
 ```
 
 **During installation:**
@@ -77,7 +79,7 @@ To update to the latest version, run the same installation command again:
 > ⚠️ You will be prompted to enter your SOCKS5 proxy port again.
 
 ```bash
-cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
+cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && wget --no-check-certificate -O led-status-daemon.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh && sh install.sh
 ```
 
 ---
@@ -247,8 +249,10 @@ If this project helped you, please consider:
 - ✅ OpenWrt روی روتر نصب باشه
 - ✅ روتر چراغ RGB داشته باشه
 - ✅ پروکسی SOCKS5 فعال (Xray، sing-box، v2ray و غیره)
-- ✅ پکیج `wget` (خودکار نصب می‌شه)
-- ✅ پکیج `zip` (خودکار نصب می‌شه)
+- ✅ `wget` (توی OpenWrt هست — برای دانلودِ اسکریپت)
+- ✅ `curl` (خودکار با `opkg` یا `apk` نصب می‌شه — برای چکِ پروکسی)
+
+> هم روی `opkg` (نسخهٔ ۲۴.۱۰ و قبل‌تر) و هم `apk` (نسخهٔ ۲۵ به بعد) کار می‌کنه.
 
 ---
 
@@ -257,7 +261,7 @@ If this project helped you, please consider:
 این **یک دستور** رو کپی کن و توی ترمینال SSH روترت بزن:
 
 ```bash
-cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
+cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && wget --no-check-certificate -O led-status-daemon.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh && sh install.sh
 ```
 
 **در حین نصب:**
@@ -273,7 +277,7 @@ cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certifi
 > ⚠️ در حین آپدیت دوباره پورت پروکسی ازت پرسیده می‌شه.
 
 ```bash
-cd /tmp && opkg update && opkg install wget-ssl unzip && wget --no-check-certificate https://codeload.github.com/phoseinq/OpenWrt-PassWall-led-proxy-status/zip/refs/heads/main -O led.zip && unzip -o led.zip && cd OpenWrt-PassWall-led-proxy-status-main && chmod +x install.sh && sh install.sh
+cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && wget --no-check-certificate -O led-status-daemon.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/led-status-daemon.sh && sh install.sh
 ```
 ---
 
