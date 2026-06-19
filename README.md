@@ -61,7 +61,7 @@ Before installation, make sure you have:
 
 ### 🚀 Quick Installation
 
-Copy and paste this **single command** into your router's SSH terminal:
+Copy and paste this **single command** into your router's SSH terminal. The **same command installs and updates** — to update later, just run it again:
 
 ```bash
 cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
@@ -84,13 +84,7 @@ sh install.sh
 
 ### 🔄 Update
 
-To update to the latest version, run the same installation command again:
-
-> ⚠️ You will be prompted to enter your SOCKS5 proxy port again.
-
-```bash
-cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
-```
+**Install and update are the same command.** Just run the install command above again to get the latest version — you'll be asked for the SOCKS5 port again.
 
 ---
 
@@ -268,7 +262,7 @@ If this project helped you, please consider:
 
 ### 🚀 نصب سریع
 
-این **یک دستور** رو کپی کن و توی ترمینال SSH روترت بزن:
+این **یک دستور** رو کپی کن و توی ترمینال SSH روترت بزن. **همین دستور هم نصب می‌کنه هم آپدیت** — برای آپدیت بعداً فقط دوباره همینو بزن:
 
 ```bash
 cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
@@ -292,13 +286,8 @@ sh install.sh
 
 ### 🔄 آپدیت
 
-برای آپدیت به آخرین نسخه، همون دستور نصب رو دوباره بزن:
+**نصب و آپدیت یک دستورِ یکسانه.** برای گرفتنِ آخرین نسخه، فقط همون دستورِ نصبِ بالا رو دوباره بزن — پورتِ SOCKS5 دوباره ازت پرسیده می‌شه.
 
-> ⚠️ در حین آپدیت دوباره پورت پروکسی ازت پرسیده می‌شه.
-
-```bash
-cd /tmp && wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/phoseinq/OpenWrt-PassWall-led-proxy-status/main/install.sh && sh install.sh
-```
 ---
 
 ### 🎮 مدیریت سرویس
